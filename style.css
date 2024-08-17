@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'manuscrita';
+    src: url(fonts/Angela\ Cindysttar.otf);
+}
+@font-face {
+    font-family: 'manuscrita2';
+    src: url(fonts/Bradley\ Milestiago.otf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Paleta de cores 
+
+--khaki: #a39b8bff;
+--celestial-blue: #1b98e0ff;
+--indigo-dye: #003d5bff;
+--coffee: #6d4c3dff;
+--dark-purple: #2e0219ff;
+*/
+    :root {
+            --cor-primaria: #293040;
+            --cor-secundaria:#D5B263;
+            --cor-terciaria: #676666;
+            --cor-quaternaria: #250214;
+            --cor-quintenaria: #003d5bff;
+            --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
+            --fonte-destaque:'manuscrita2';
+
+        }
+
+        html, body {
+            scroll-behavior: smooth;
+        }
+
+    body {
+            background-color: var(--cor-primaria);
+        }
+
+        header {
+            
+            background-color: transparent;
+            color: white;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.32);
+            
+        }
+        
+            nav { /* Barra de menu */
+                
+                background-color: transparent;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                gap: 0px 10px;
+                /* Glass effect */
+                backdrop-filter: blur(20px);
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.71)-35% , transparent);
+                background-color: rgba(0, 0, 0, 0.123);
+            }
+                
+                .nav-bar {
+                    justify-content: space-between;
+                    padding: 10px ;
+                }
+
+                    .nav-list ul {
+                        display: flex;
+                        list-style: none;
+                    }
+
+                        .nav-item {
+                            margin: 0 20px;
+                            text-shadow: 4px 1px 6px black;
+                            transition-duration: 500ms;
+                            transition-timing-function: ease-out;   
+                            list-style: none;
+                            color: white;
+                    }
+
+                        .nav-item:hover {
+                            text-decoration: underline;
+                        }
+            
+                    .nav-link {
+                        text-decoration: none;
+                        font-size: 1.15rem;
+                        color: white;
+                        font-weight: 400;
+                    }
+
+                    .logo {
+                        margin-left: 5px;
+                    }
+
+                        .logo h1 {
+                        
+                            align-items: center;
+                            font-family: manuscrita2;
+                            color: white;
+                            text-shadow: 4px 1px 6px black;
+                            transition-duration: 1s;
+                            transition-timing-function: ease-out;
+                            font-size: 1.2rem;
+                        }
+
+                        .logo p {
+                                
+                                align-items: center;
+                                font-family: Arial, Helvetica, sans-serif;
+                                font-size: 0.4rem;
+                                line-height: 0.7rem;
+                                padding: 0px 20px;
+                                margin-left: -0.6rem;
+                                color: rgb(0, 0, 0);
+                                transition-duration: 500ms;
+                                transition-timing-function: ease-out;    
+                        }
+
+                        .logo p:hover {
+                            color: white;
+                            }
+
+                        .logo abbr {
+                            text-decoration: none;
+                        }
+
+                        
+                    .mobile-menu  {
+                           
+                            display: none;
+                            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.605);
+                            /* Se colocar o border-radius normal, ele só arrendonda o canto superior esquerdo e o canto inferior direito, para customizar totalmente, tem que fazer um por um */
+                            text-shadow: 4px 1px 6px black;
+                            color: white;
+                        }
+
+                        .mobile-menu.open {
+                            z-index: 8;
+                            display: flex;
+                            position: absolute;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100vh;
+                            width: 100vw;
+                            background-color: rgba(0, 0, 0, 0.7);
+                            backdrop-filter: blur(10px);
+                               
+                        }
+
+                
+                        .mobile-menu-icon  {
+                            display: none;
+                            z-index: 10;
+                            margin-right: 10px;
+                            cursor: pointer;
+                            background-color: transparent;  
+                        }
+
+                        .mobile-menu ul {
+                            background-color: var(--cor-quintenaria);
+                            border-radius: 20px;
+                            width: 100%;
+                            background-image: linear-gradient(to bottom,var(--cor-primaria), var(--cor-quintenaria));
+                            padding: 10px;
+                        }
+
+                        
+       
+        .hero {
+            top: 0;
+            margin-top: 0;
+            width: 100vw;
+            display: flex;
+            overflow: none;
+            min-width: 211.13px;
+        }
+
+            .hero h1 {
+                z-index: -1;
+                padding: 10px;
+                width: 100vw;
+                text-align: center;
+                color: white;
+                
+                font-size: clamp(1rem, 2vw + 1rem, 3rem);
+                background-color: transparent;
+                text-shadow: 4px 1px 6px black;
+                
+                
+            }
+
+            .video-bg {
+                        
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: -1;
+            }
+        
+                .video-bg  h1 {
+                z-index: 8;
+                align-content: flex-end;
+                font-size: 25px;
+                padding-bottom: 10px;
+                color: #ffffff;
+                font-weight: bold;
+                justify-content: center;
+                text-align: center;
+                text-shadow: 4px 1px 6px black;
+                }
+        
+        .about {
+            .video-bg::break-after: ;
+
+        }
+                
+
+
+
+    @media  (max-width: 600px) {
+    
+        .nav-item {
+            display: none;
+        }
+        .mobile-menu-icon {
+            display:block;
+            
+        }
+        .mobile-menu-icon button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            
+        }
+        .mobile-menu ul {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 1rem;
+
+        }
+        .mobile-menu .nav-item {
+            display: inline;
+            padding-top: 1.2rem;
+        }
+        .open {
+            position: absolute;
+        }
+    
+    }
+
+
+
