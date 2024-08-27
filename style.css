@@ -7,10 +7,20 @@
     font-family: 'manuscrita2';
     src: url(fonts/Bradley\ Milestiago.otf);
 }
+@font-face {
+    font-family: 'elegante' ;
+    src: url(fonts/Bashield.otf);
+}
+@font-face {
+    font-family: 'elegante2';
+    src: url(fonts/Elegante\ Classica.ttf);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    
 }
 /* Paleta de cores 
 
@@ -23,20 +33,23 @@
     :root {
             --cor-primaria: #293040;
             --cor-secundaria:#D5B263;
-            --cor-terciaria: #676666;
+            --cor-terciaria: #aaa9a9;
             --cor-quaternaria: #250214;
             --cor-quintenaria: #003d5bff;
             --fonte-padrão: Arial, Verdana, Helvetica, sans-serif;
-            --fonte-destaque:'manuscrita2';
+            --fonte-cursiva:'manuscrita2';
+            --fonte-elegante: 'elegante2';
 
         }
 
         html, body {
-            scroll-behavior: smooth;
+            
+            
         }
 
     body {
             background-color: var(--cor-primaria);
+            overflow-x: hidden;
         }
 
         header {
@@ -44,6 +57,7 @@
             background-color: transparent;
             color: white;
             box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.32);
+            
             
         }
         
@@ -56,6 +70,7 @@
                 gap: 0px 10px;
                 /* Glass effect */
                 backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
                 background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.71)-35% , transparent);
                 background-color: rgba(0, 0, 0, 0.123);
             }
@@ -97,7 +112,7 @@
                         .logo h1 {
                         
                             align-items: center;
-                            font-family: manuscrita2;
+                            font-family: var(--fonte-cursiva);
                             color: white;
                             text-shadow: 4px 1px 6px black;
                             transition-duration: 1s;
@@ -128,7 +143,7 @@
 
                         
                     .mobile-menu  {
-                           
+                           z-index: 89;
                             display: none;
                             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.605);
                             /* Se colocar o border-radius normal, ele só arrendonda o canto superior esquerdo e o canto inferior direito, para customizar totalmente, tem que fazer um por um */
@@ -137,29 +152,31 @@
                         }
 
                         .mobile-menu.open {
-                            z-index: 8;
+                            z-index: 90;
                             display: flex;
-                            position: absolute;
+                            position:absolute;
                             flex-direction: row;
                             justify-content: center;
                             align-items: center;
                             height: 100vh;
                             width: 100vw;
-                            background-color: rgba(0, 0, 0, 0.7);
+                            background-color: rgba(0, 0, 0, 0.95);
                             backdrop-filter: blur(10px);
+                            -webkit-backdrop-filter: blur(10px);
                                
                         }
 
                 
                         .mobile-menu-icon  {
                             display: none;
-                            z-index: 10;
+                            z-index: 91;
                             margin-right: 10px;
                             cursor: pointer;
                             background-color: transparent;  
                         }
 
                         .mobile-menu ul {
+                            z-index: 90;
                             background-color: var(--cor-quintenaria);
                             border-radius: 20px;
                             width: 100%;
@@ -167,59 +184,182 @@
                             padding: 10px;
                         }
 
-                        
-       
-        .hero {
-            top: 0;
-            margin-top: 0;
-            width: 100vw;
-            display: flex;
-            overflow: none;
-            min-width: 211.13px;
-        }
-
-            .hero h1 {
-                z-index: -1;
-                padding: 10px;
-                width: 100vw;
-                text-align: center;
-                color: white;
-                
-                font-size: clamp(1rem, 2vw + 1rem, 3rem);
-                background-color: transparent;
-                text-shadow: 4px 1px 6px black;
-                
-                
-            }
-
-            .video-bg {
-                        
-                position: absolute;
+        
+            .hero {
                 top: 0;
-                left: 0;
-                width: 100%;
-                z-index: -1;
-            }
-        
-                .video-bg  h1 {
-                z-index: 8;
-                align-content: flex-end;
-                font-size: 25px;
-                padding-bottom: 10px;
-                color: #ffffff;
-                font-weight: bold;
-                justify-content: center;
-                text-align: center;
-                text-shadow: 4px 1px 6px black;
-                }
-        
-        .about {
-            .video-bg::break-after: ;
-
-        }
+                margin-top: 0;
+              
+                width: 100vw;
+                display: flex;
+                /* min-width: 211.13px; */
                 
+            }
+                .hero h1 {
+                    z-index: -1;
+                    padding: 10px;
+                    width: 100vw;
+                    text-align:center;
+                    color: white;
+                    font-family: var(--fonte-elegante), 'cursive';
+                    font-size: clamp(1rem, 2vw + 1rem, 3rem);
+                    background-color: transparent;
+                    backdrop-filter: blur(1px);
+                    -webkit-backdrop-filter: blur(1px);
+                    text-shadow: 4px 1px 6px black;
+                }
+    
+                    .video-bg {
+                                
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        z-index: -1;
+                        box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.333);
+                    }
+                
+                        .video-bg  h1 {
+                        z-index: 8;
+                        align-content: flex-end;
+                        font-size: 25px;
+                        padding-bottom: 10px;
+                        color: #ffffff;
+                        font-weight: bold;
+                        justify-content: center;
+                        text-align: center;
+                        text-shadow: 4px 1px 6px black;
+                    }
+                                   
+        main {
+        
+        margin-top: 52%;
+        overflow-x: hidden;
+        
+        }                
+       
+            .about {
+            
+            
+           padding-top: 30vh;
+           padding-bottom: 30vh;
+            
+            min-height: 30vh;
+            
+            display: flex;
+            
+            align-items: center;
+            flex-direction: row;
+            background-color: var(--cor-terciaria);
+            flex-direction: row;
+            text-align: center;
+            
+            text-align: justify;
+            gap: 1rem;
+            padding-top: 5rem;
+            background-image: url(imagens/fotos/foto\ perfil_auto_x2.jpg);
+            background-position: top right;
+            background-size:cover;
+            background-attachment: fixed;
+            box-shadow: inset 10px 10px 13px rgba(0, 0, 0, 0.342);
+            
+          
+
+            }
+
+                .aboutleft {
+                
+                width: 50%;
+                min-width: 200px;
+                max-width: 600px;
+                margin-right: auto;
+                margin-top: 1rem;
+                
+                }
+
+                .aboutright {
+                    width: 50%;
+                    height: 100%;
+                   
 
 
+
+                }
+                    .aboutright img {
+                        
+                        width: 100%;
+                        height: 100%;
+                        max-width: 400px;
+                        max-height: 800px;
+                        object-fit: cover;
+                        object-position: top right;
+                        margin-right: 0;
+                        padding: 0;
+                        border-radius: 25%;
+                        border-bottom-left-radius: 40%;
+                        border-top-left-radius: 40% ;
+                        box-shadow: 0px 1px 6px 3px rgba(0, 0, 0, 0.333);
+                        
+                    }
+                    
+                    
+                
+                .about  h2 {
+               
+                    padding-left: 35%;
+
+                    width: 100%;
+                    position: absolute;
+                    align-self: flex-start;
+                    margin-top: -5rem;
+                    
+                    background-color: rgba(255, 255, 255, 0.427);
+    
+                    
+                    font-size: clamp(1rem, 2vw + 1rem, 3rem);
+                    font-family: var(--fonte-elegante), 'cursive';
+                    color: var(--cor-quintenaria);
+                    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.333);
+                    box-shadow: 3px 2px 8px 2px rgba(0, 0, 0, 0.329);
+                    
+                
+                }
+                .about h2::after {
+                    
+                }
+
+                .about h2:hover {
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
+   
+                .about p {
+                
+                    font-weight: 500;
+                    background-color: rgba(255, 255, 255, 0.427);
+                    
+                    padding: 1rem;
+                    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.333);
+                    box-shadow: 3px 2px 8px 2px rgba(0, 0, 0, 0.329);
+                    border-radius: 20% 0%;
+                
+                
+                
+                
+                }
+
+                    .about p:hover {
+                        background-color: rgba(255, 255, 255, 0.8);
+                    }
+
+                   .about p::first-letter {
+                    font-family: var(--fonte-cursiva);
+                    font-size: 4rem;
+                    color: var(--cor-quintenaria);
+                    float: left;
+                    margin-right: 1.5rem;
+                    text-shadow: 5px black;
+                    }
+                
+                
 
     @media  (max-width: 600px) {
     
@@ -250,6 +390,8 @@
         .open {
             position: absolute;
         }
+
+       
     
     }
 
