@@ -6,6 +6,12 @@
     <title>Bem-vindo</title>
     <link rel="shortcut icon" href="imagens/favicons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    
+   
+    
+    
 </head>
 
 
@@ -51,7 +57,7 @@
             plays-inline>
             <source src="videos/7578552-sd_960_540_30fps.mp4">
         </video>
-        <h1 class="fade-in">Venha conhecer seu novo lar!</h1>
+       
     </div>
     <main>  
         
@@ -88,55 +94,74 @@
         </section>
         <script src="script.js"></script>
     </main>
-    <section class="avenda">
-    <div class="img-slider">
-        <div class="venda-headline">
-            <h2>À Venda</h2>
-        </div>
-        <div class="slide">
-            <img src="imagens/fotos/lake-geneva-3524431_640.jpg" alt=""> <!-- mudar para picture depois, para fins de media query -->
-            <div class="info">
-                <h3>Casa no Lago - R$ 5.000.000</h3>
-                <p>Compre, muito massa!</p>
-
-            </div>
-
-        </div>
-        <div class="slide">
-            <img src="imagens/fotos/beautiful-21864_640.jpg" alt=""> <!-- mudar para picture depois, para fins de media query -->
-            <div class="info">
-                <h3>Casa Lindona - R$ 3.000.000</h3>
-                <p>Eu quero!</p>
-
-            </div>
-
-        </div>
-        <div class="slide">
-            
-            <picture>
-                
-                    <source srcset="imagens/fotos/kitchen-8714865_640.jpg" media="(max-width: 600px)">
-                    <img src="imagens/fotos/kitchen-8714865_1280.jpg" alt="Descrição da imagem">
-                
-            </picture>
-            <div class="info">
-                <h3>Casa bonitinha -  R$ 1.000.000</h3>
-                <p> Saiba mais</p>
-
-            </div>
-        </div>
-        <div class="navigation">
-            <div class="btn"></div>
-            <div class="btn"></div>
-            <div class="btn"></div>
-        </div>
-    </div>
-
-
-
-
+    <section class="venda">
 
     
+    <div class="venda-headline">
+        <h2> À Venda </h2>
+    </div>
+   
+    
+    <div class="center">
+      <div class="carousel-wrapper">
+        <!-- abstract radio buttons for slides -->
+        <input id="slide1" type="radio" name="controls" checked="checked" />
+        <input id="slide2" type="radio" name="controls" />
+        <input id="slide3" type="radio" name="controls" />
+        <input id="slide4" type="radio" name="controls" />
+        <input id="slide5" type="radio" name="controls" />
+    
+        <!-- navigation dots -->
+        <label for="slide1" class="nav-dot"></label>
+        <label for="slide2" class="nav-dot"></label>
+        <label for="slide3" class="nav-dot"></label>
+        <label for="slide4" class="nav-dot"></label>
+        <label for="slide5" class="nav-dot"></label>
+    
+        <!-- arrows -->
+        <label for="slide1" class="left-arrow"> < </label>
+        <label for="slide2" class="left-arrow"> < </label>
+        <label for="slide3" class="left-arrow"> < </label>
+        <label for="slide4" class="left-arrow"> < </label>
+        <label for="slide5" class="left-arrow"> < </label>
+    
+        <label for="slide1" class="right-arrow"> > </label>
+        <label for="slide2" class="right-arrow"> > </label>
+        <label for="slide3" class="right-arrow"> > </label>
+        <label for="slide4" class="right-arrow"> > </label>
+        <label for="slide5" class="right-arrow"> > </label>
+    
+        <div class="carousel">
+          <ul>
+            <li>
+              <picture>
+                <source srcset="imagens/fotos/beautiful-21864_640.jpg"  media="(min-width: 600px)">
+                <img src="imagens/fotos/beautiful-21864_1280.jpg" alt="">
+              </picture>
+              
+            </li>
+            <li>
+              <img src="https://m.media-amazon.com/images/I/31Y+R3Y3nvL._SL1000_.jpg" alt="">
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/osef-art/ministick/main/data/img/main/ministick-clip-3.gif" />
+            </li>
+            <li>
+              <img src="https://raw.githubusercontent.com/osef-art/osef-art.github.io/master/src/assets/wallpapers/smoke.jpg">
+            </li>
+            <li>
+              <img src="https://images.ctfassets.net/9l3tjzgyn9gr/photo-157575/d224d518da6c26515a470a9b7e490df8/157575-honey-bun-baby.jpg?fm=jpg&fl=progressive&q=50&w=1200" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+          
+    
+</section>
+   
+    
+   
 </body>
-
 </html>
